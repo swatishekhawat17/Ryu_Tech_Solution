@@ -3,48 +3,77 @@ import * as FaIcons from "react-icons/fa";
 import * as MdIcons from "react-icons/md";
 import * as RiIcons from "react-icons/ri";
 import * as ImIcons from "react-icons/im";
+import { ServiceCard } from "./components/ServiceCard";
 
-import {ServiceCard} from "./components/ServiceCard";
-import { QualityCard } from "./components/ServiceCard";
-
-// for showing the slider on the screen 
- const homeSlides = [
-    { src: "/Images/Home_Slider/img_1.jpg", title: "PCB", desc: "PCB Image" },
-    { src: "/Images/Home_Slider/img_2.jpg", title: "Circuit", desc: "Electronics World" },
-  ];
+const homeSlides = [
+  { src: "/Images/Home_Slider/Graphic_Design.jpg", title: "Graphic Design", desc: "" },
+  { src: "/Images/Home_Slider/Logo_Design.jpg", title: "Logo Design", desc: "" },
+  { src: "/Images/Home_Slider/Web_Design.jpg", title: "WebApp Design", desc: "" },
+];
 
 export default function Home() {
   return (
-  <>
-    {/* Section 1: Header + Slider */}
-    <div className="min-h-screen flex flex-col items-center justify-center text-center">
-      <h1 className="text-3xl font-bold text-gray-800 ">
-        We are here for you 🌟
-      </h1>
-      <ImageSlider slides={homeSlides} height="h-[500px]" autoplaySpeed={3000} />
-    </div>
+    <>
+      {/* Section 1: Header + Slider */}
+      <section className="relative min-h-screen flex flex-col items-center justify-center text-center overflow-hidden ">
 
-    {/*Section 2: Quality Cards*/}
-    <div className="bg-gray-50 grid grid-cols-1 md:grid-cols-2 gap-8 p-20 ">
-      <QualityCard icon={<FaIcons.FaTools />} title="Product Development"/>
-      <QualityCard icon={<MdIcons.MdDesignServices />} title="Graphic Design" />
-      <QualityCard icon={<RiIcons.RiVideoAiLine />} title="Video Editing" />
-      <QualityCard icon={<MdIcons.MdModeEditOutline />} title="Logo & Banner Design" />
-      <QualityCard icon={<ImIcons.ImAndroid />} title="App Development" />
-      <QualityCard icon={<FaIcons.FaLaptopCode />} title="Website Development" />
-    </div>
+        <div className="z-10 space-y-6 px-6">
+          <h1 className="text-4xl md:text-5xl font-extrabold text-gray-800 leading-tight animate-fadeIn">
+            We craft innovative digital experiences with our expertise 🌟
+          </h1>
+          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+            Transform your ideas into powerful products, beautiful designs, and scalable solutions.
+          </p>
+        </div>
 
-    {/* Section 3: Service Cards */}
-    <div className="bg-gray-50 flex flex-wrap gap-6 justify-center items-center p-8">
-      <ServiceCard icon={<FaIcons.FaTools />} title="Product Development"/>
-      <ServiceCard icon={<MdIcons.MdDesignServices />} title="Graphic Design" />
-      <ServiceCard icon={<RiIcons.RiVideoAiLine />} title="Video Editing" />
-      <ServiceCard icon={<MdIcons.MdModeEditOutline />} title="Logo & Banner Design" />
-      <ServiceCard icon={<ImIcons.ImAndroid />} title="App Development" />
-      <ServiceCard icon={<FaIcons.FaLaptopCode />} title="Website Development" />
-    </div>
+        <div className="mt-10 w-full max-w-6xl shadow-xl rounded-2xl overflow-hidden z-10 animate-fadeInSlow">
+          <ImageSlider slides={homeSlides} height="h-[500px]" autoplaySpeed={3000} />
+        </div>
+      </section>
 
-  </>
-);
+      {/* Section 2: Services */}
+      <section>
+        <div className="text-center mb-12 px-4">
+          <h2 className="text-4xl font-bold text-gray-800 mb-4">Popular Services</h2>
+          <div className="h-1 w-24 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"></div>
+          <p className="text-gray-600 mt-4">
+            Explore our range of creative and development services to help your brand shine.
+          </p>
+        </div>
 
+        <div className="flex flex-wrap justify-center gap-4 px-6 max-w-6xl mx-auto">
+          <ServiceCard
+            icon={<FaIcons.FaTools />}
+            title="Product Development"
+            desc="From idea to launch, we build reliable digital products."
+          />
+          <ServiceCard
+            icon={<MdIcons.MdDesignServices/>}
+            title="Graphic Design"
+            desc="Visually stunning graphics to make your brand stand out."
+          />
+          <ServiceCard
+            icon={<RiIcons.RiVideoAiLine  />}
+            title="Video Editing"
+            desc="Creative storytelling through professional editing."
+          />
+          <ServiceCard
+            icon={<MdIcons.MdModeEditOutline />}
+            title="Logo & Banner Design"
+            desc="Crafting unique identities and marketing visuals."
+          />
+          <ServiceCard
+            icon={<ImIcons.ImAndroid  />}
+            title="App Development"
+            desc="Intuitive and performant mobile applications."
+          />
+          <ServiceCard
+            icon={<FaIcons.FaLaptopCode />}
+            title="Website Development"
+            desc="Responsive, modern, and scalable web solutions."
+          />
+        </div>
+      </section>
+    </>
+  );
 }

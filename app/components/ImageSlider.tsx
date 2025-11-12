@@ -35,7 +35,7 @@ export default function ImageSlider({
   };
 
   return (
-    <div className="w-full max-w-7xl mx-auto mt-10">
+    <div className="w-full max-w-9xl mx-auto mt-10">
       <Slider {...settings}>
         {slides.map((slide, index) => (
           <div key={index} className={`relative overflow-hidden rounded-3xl ${height} md:h-[500px]`}>
