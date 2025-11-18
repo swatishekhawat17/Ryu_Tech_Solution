@@ -1,11 +1,20 @@
 @import "tailwindcss";
 @import "slick-carousel/slick/slick.css";
 @import "slick-carousel/slick/slick-theme.css";
-
+@import 'aos/dist/aos.css';
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+}
+.slick-slider {
+  margin-bottom: 0 !important;
+}
+
+.slick-dots {
+  bottom: 10px !important; /* move inside the slider */
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 @theme inline {

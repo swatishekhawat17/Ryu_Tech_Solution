@@ -19,7 +19,7 @@ interface ImageSliderProps {
 
 export default function ImageSlider({
   slides,
-  height = "h-60",
+  height = "h-100",
   autoplaySpeed = 3000,
 }: ImageSliderProps) {
 

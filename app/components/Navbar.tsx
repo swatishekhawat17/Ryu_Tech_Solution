@@ -12,7 +12,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
         {/* Logo / Brand */}
         <div className="text-2xl font-bold text-blue-400">
-          Ryuu<span className="text-purple-400"> Technology Solutions</span>
+          {/* Ryuu<span className="text-purple-400"> Technology Solutions</span> */}
         </div>
 
         {/* Desktop Menu */}
