@@ -1,0 +1,87 @@
+/*---------- NAVBAR SECTION ----------*/
+.font-navbar {
+  font-family: 'Poppins', sans-serif,
+}
+
+/* Icon wrapper for hover + positioning */
+.icon-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip common styling */
+.icon-tooltip {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -32px;
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Show tooltip on hover */
+.icon-wrapper:hover .icon-tooltip {
+  opacity: 1;
+}
+
+/* ---------- Navbar: menu item + underline + dropdown ---------- */
+/* container for a menu item that has an underline + (optional) dropdown */
+.nav-item {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* underline element (starts with width 0, expands on hover) */
+.nav-underline {
+  position: absolute;
+  left: 0;
+  bottom: -6px; /* tweak to match your layout */
+  height: 5px;
+  width: 0;
+  border-radius: 999px;
+  transition: width 0.3s ease;
+  pointer-events: none;
+}
+
+/* when parent .nav-item is hovered, expand underline */
+.nav-item:hover .nav-underline,
+.nav-item:focus-within .nav-underline {
+  width: 100%;
+}
+
+/* Dropdown container (hidden by default) */
+.nav-dropdown {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: calc(100% + 8px); /* small gap below the menu item */
+  min-width: 10rem; /* you can adjust */
+  padding: 0.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  z-index: 40;
+}
+
+/* Show dropdown when parent hovered or focused */
+.nav-item:hover .nav-dropdown,
+.nav-item:focus-within .nav-dropdown {
+  display: block;
+}
+
+/* Arrow rotate helper (toggle rotation when parent hovered) */
+.nav-arrow {
+  transition: transform 0.25s ease;
+}
+.nav-item:hover .nav-arrow,
+.nav-item:focus-within .nav-arrow {
+  transform: rotate(180deg);
+}
+
+

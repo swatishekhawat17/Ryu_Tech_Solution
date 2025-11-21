@@ -5,7 +5,7 @@ import AOS from "aos";
 export default function PageWrapper({ children }) {
   useEffect(() => {
     AOS.init({
-      duration: 800,
+      duration: 400,
       once: true,
     });
   }, []);

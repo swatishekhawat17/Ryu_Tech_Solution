@@ -1,0 +1,60 @@
+/* ==== Contact Form Styles ==== */
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+/* Grid rows */
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .formRow {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Labels */
+.formLabel {
+  font-weight: 600;
+}
+
+/* Inputs & Textarea */
+.formInput,
+.formTextarea {
+  width: 100%;
+  margin-top: 4px;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+.formInput:focus,
+.formTextarea:focus {
+  border-color: linear-gradient(to right, rgb(164, 92, 255), rgb(50, 199, 255));
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+}
+
+/* Button */
+.formButton {
+  width: 100%;
+  padding: 14px;
+  border-radius: 15px;
+  font-weight: bold;
+  background: linear-gradient(to right, rgb(164, 92, 255), rgb(50, 199, 255));
+  color: white;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.formButton:hover {
+  opacity: 0.7;
+ 
+}
