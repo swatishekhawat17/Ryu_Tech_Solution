@@ -41,6 +41,14 @@
   background-image: linear-gradient(135deg, #7f5ce633, #60A5FA33, #5EEAD433);
 }
 
+.bg-brand-gradient-dark {
+  background: radial-gradient(
+    circle at center,
+    rgba(50, 199, 255, 0.35),   /* Light Blue Glow */
+    rgba(164, 92, 255, 0.35),   /* Light Purple Glow */
+    #0b0f16 85%                 /* Fade to dark */
+  );
+}
 /* ---------- DEFAULT BODY ---------- */
 body {
   color: rgb(var(--foreground-rgb));
@@ -61,4 +69,10 @@ body {
   padding: 0 !important;
   margin: 0 !important;
 }
+.slick-dots li.slick-active div {
+  background-color: white !important; /* active dot white */
+  opacity: 1 !important;              /* fully opaque */
+  transform: scale(1.2);              /* optional: slightly larger */
+}
+
 

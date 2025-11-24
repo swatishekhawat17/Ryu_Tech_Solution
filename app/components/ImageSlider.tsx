@@ -2,6 +2,7 @@
 
 import Slider from "react-slick";
 import Image from "next/image";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 type Slide = {
   src: string;
@@ -29,9 +30,67 @@ export default function ImageSlider({
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed,
-    arrows: false,
+    arrows: true,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
+    appendDots: (dots: any) => (
+      <ul style={{ margin: "0px" }}> {dots} </ul>
+    ),
+    customPaging: (i: number) => (
+      <div
+        style={{
+          width: "10px",
+          height: "10px",
+          borderRadius: "50%",
+          backgroundColor: "white",
+          opacity: 0.5, // inactive dots slightly transparent
+          cursor: "pointer",
+        }}
+      ></div>
+    ),
   };
-
+  function NextArrow(props: any) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{
+          ...style,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          right: "10px",
+          zIndex: 10,
+          color: "white",
+        }}
+        onClick={onClick}
+      >
+        <FaArrowRight size={24} />
+      </div>
+    );
+  }
+  
+  function PrevArrow(props: any) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{
+          ...style,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          left: "10px",
+          zIndex: 10,
+          color: "white",
+        }}
+        onClick={onClick}
+      >
+        <FaArrowLeft size={24} />
+      </div>
+    );
+  }
+  
   return (
     <div className="w-full mt-10 flex justify-start pr-10">
       {/* White box */}

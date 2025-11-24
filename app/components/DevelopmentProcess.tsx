@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect } from "react";
-import AOS from "aos";
 import Image from "next/image";
 
 const steps = [
@@ -36,9 +35,9 @@ export default function DevelopmentProcess() {
  
 
   return (
-    <section className="py-20 bg-brand-gradient-soft mt-4 mb-4 text-white">
+    <section className="py-20 bg-brand-gradient-dark mt-4 mb-4 text-white">
       <div className="max-w-7xl mx-auto px-4 text-center">
-      <h2 className="text-4xl font-bold mb-4 bg-clip-text text-transparent bg-brand-gradient">
+      <h2 className="text-4xl font-bold mb-4 bg-clip-text text-transparent bg-white">
   Our Development Process
 </h2>
 

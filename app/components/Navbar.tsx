@@ -17,7 +17,7 @@ export default function Navbar() {
       <nav
         className="
           font-navbar font-bold text-[18px]
-          absolute w-full top-0 left-0 z-30
+          absolute w-full top-0 left-0 z-30 
           bg-transparent backdrop-blur-xl
           transition-all duration-300 px-10 py-4
           group-hover:bg-white group-hover:backdrop-blur-0
@@ -113,9 +113,9 @@ export default function Navbar() {
               </div>
 
               <div className="icon-wrapper">
-                <MdEmail className="text-2xl cursor-pointer" />
+                <MdEmail className="text-xl cursor-pointer" />
                 <span className="icon-tooltip bg-brand-gradient text-white">
-                  rtu@gmail.com
+                  ryuutechnologysolutions@gmail.com
                 </span>
               </div>
             </div>
@@ -200,7 +200,7 @@ export default function Navbar() {
 
               <div className="flex items-center gap-3">
                 <MdEmail className="text-lg" />
-                <span className="text-sm">info@ryuutech.com</span>
+                <span className="text-sm">ryuutechnologysolutions@gmail.com</span>
               </div>
             </div>
           </div>

@@ -41,7 +41,7 @@ export default function ServiceList() {
             icon={<FaIcons.FaTools />}
             title="Product Development"
             desc="From idea to launch, we build reliable digital products."
-            hoverDesc="We help you transform concepts into functional products with full-cycle development — including design, architecture, prototyping, testing, and deployment."
+            hoverDesc="We help you transform concepts into functional products development — including design, architecture and deployment."
             link="/services/product-development"
           />
 

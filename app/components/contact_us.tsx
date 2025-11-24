@@ -34,6 +34,7 @@ export default function ContactUs() {
     });
 
     const data = await res.json();
+    console.log(data);
 
     if (data.success) {
       setStatus("Message sent successfully!");

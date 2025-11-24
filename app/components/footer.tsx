@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="bg-[#0b2434] text-gray-300 py-10 px-6">
+    <footer className="bg-brand-gradient-dark text-gray-300 py-10 px-6">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
         
         {/* Column 1 - About */}
@@ -27,7 +27,7 @@ export default function Footer() {
         {/* Column 3 - Contact */}
         <div>
           <h3 className="text-xl font-semibold text-white mb-4">Contact Us</h3>
-          <p>Email: <a href="mailto:info@rts.com" className="hover:text-blue-400 transition">info@trs.com</a></p>
+          <p>Email: <a href="mailto:ryuutechnologysolutions@gmail.com" className="hover:text-blue-400 transition">ryuutechnologysolutions@gmail.com</a></p>
           <p>Phone: +91 9876543210</p>
           <div className="flex justify-center md:justify-start mt-4 space-x-4">
             <a href="#" className="hover:text-blue-400 transition">🌐</a>
@@ -39,7 +39,7 @@ export default function Footer() {
 
       {/* Bottom Section */}
       <div className="border-t border-gray-700 mt-8 pt-4 text-center text-sm">
-        © {new Date().getFullYear()} Ryu Technology Solution. All rights reserved.
+        © {new Date().getFullYear()} Ryuu Technology Solution. All rights reserved.
       </div>
     </footer>
   );
