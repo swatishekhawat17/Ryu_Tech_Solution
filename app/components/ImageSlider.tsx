@@ -33,9 +33,7 @@ export default function ImageSlider({
     arrows: true,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
-    appendDots: (dots: any) => (
-      <ul style={{ margin: "0px" }}> {dots} </ul>
-    ),
+    appendDots: (dots: any) => <ul style={{ margin: "0px" }}> {dots} </ul>,
     customPaging: (i: number) => (
       <div
         style={{
@@ -69,7 +67,7 @@ export default function ImageSlider({
       </div>
     );
   }
-  
+
   function PrevArrow(props: any) {
     const { className, style, onClick } = props;
     return (
@@ -90,31 +88,33 @@ export default function ImageSlider({
       </div>
     );
   }
-  
+
   return (
-    <div className="w-full mt-10 flex justify-start pr-10">
+    <div className="w-full mt-20 flex justify-start pr-10">
       {/* White box */}
-      <div className="w-full max-w-3xl bg-white rounded-3xl p-2 shadow-xl">
+      <div className="w-full max-w-5xl bg-white rounded-3xl pt-2 pb-0 px-2 shadow-xl">
         {/* Content inside white box (slider on right) */}
         <div className="flex justify-end w-full">
-          <div className="w-full max-w-3xl">
+          <div className="w-full max-w-5xl">
             <Slider {...settings}>
               {slides.map((slide, index) => (
                 <div
                   key={index}
                   className={`relative overflow-hidden rounded-3xl ${height} md:h-[500px]`}
                 >
-                  {/* Background image */}
-                  <Image
-                    src={slide.src}
-                    alt={slide.title}
-                    fill
-                    style={{ objectFit: "cover" }}
-                    className="rounded-3xl"
-                  />
+                  {/* FORCE clipping to avoid flicker */}
+                  <div className="absolute inset-0 overflow-hidden rounded-3xl">
+                    <Image
+                      src={slide.src}
+                      alt={slide.title}
+                      fill
+                      className="object-cover"
+                      priority
+                    />
+                  </div>
 
                   {/* Overlay */}
-                  <div className="absolute inset-0 bg-black/40 flex flex-col justify-center items-start text-white rounded-xl pl-8 md:pl-16">
+                  <div className="absolute inset-0 bg-black/40 flex flex-col justify-center items-start text-white pl-8 md:pl-16">
                     <h2 className="text-3xl md:text-5xl font-bold mb-3 drop-shadow-lg">
                       {slide.title}
                     </h2>

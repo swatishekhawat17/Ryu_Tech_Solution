@@ -7,27 +7,27 @@ const steps = [
   {
     title: "DISCOVERY",
     desc: "We understand your business needs, goals, and target audience to define a clear roadmap.",
-    img: "/Images/process/discovery.jpg",
+    img: "/Images/Dev_Process/discovery.jpg",
   },
   {
     title: "DESIGN & PLANNING",
     desc: "We create wireframes, UI/UX designs, and architectural plans for a flawless experience.",
-    img: "/Images/process/design.jpg",
+    img: "/Images/Dev_Process/design.jpg",
   },
   {
     title: "DEVELOPMENT & TESTING",
     desc: "Our skilled developers build and rigorously test your product using modern tools.",
-    img: "/Images/process/development.jpg",
+    img: "/Images/Dev_Process/development.jpg",
   },
   {
     title: "PROTOTYPING & MVP DEVELOPMENT",
     desc: "We create functional prototypes or MVPs to validate ideas faster.",
-    img: "/Images/process/prototype.jpg",
+    img: "/Images/Dev_Process/prototype.jpg",
   },
   {
     title: "LAUNCH, MAINTENANCE & SUPPORT",
     desc: "Your product goes live with continuous updates, monitoring, and enhancements.",
-    img: "/Images/process/launch.jpg",
+    img: "/Images/Dev_Process/launch.jpg",
   },
 ];
 

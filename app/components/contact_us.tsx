@@ -158,14 +158,13 @@ export default function ContactUs() {
           <div className="flex justify-center items-center">
             <div className="relative w-[650px] h-[650px] rounded-4xl overflow-hidden">
               <Image
-                src="/Images/Contact_us.jpg"
+                src="/Images/Contact/Contact_us.jpg"
                 alt="Contact Illustration"
                 fill
                 className="object-cover opacity-70"
               />
             </div>
           </div>
-
         </div>
       </div>
     </section>

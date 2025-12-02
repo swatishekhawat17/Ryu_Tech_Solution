@@ -1,4 +1,4 @@
-import ServiceList from "./components/ServiceList";
+import ServiceSection from "./components/ServiceSection";
 import PageWrapper from "./components/PageWraper";
 import ContactUs from "./components/contact_us";
 import Hero from "./components/animation";
@@ -11,7 +11,7 @@ export default function Home() {
         {/*Section 1: Animation + navigation bar +Slider */}
         <Hero />
         {/*Section 2: Service Cards */ }
-        <ServiceList/>
+        <ServiceSection/>
         {/* Section 3: Development Process */}
         <DevelopmentProcess/>
         {/*Section 4: Contact Us */}

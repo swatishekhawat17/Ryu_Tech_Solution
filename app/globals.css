@@ -74,5 +74,13 @@ body {
   opacity: 1 !important;              /* fully opaque */
   transform: scale(1.2);              /* optional: slightly larger */
 }
+/* Fix rounding flash issue */
+.slick-list,
+.slick-track,
+.slick-slide > div {
+  border-radius: 1.5rem !important; /* same as rounded-3xl */
+  overflow: hidden !important;
+}
+
 
 

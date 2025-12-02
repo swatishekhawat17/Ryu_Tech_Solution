@@ -54,21 +54,42 @@ export default function Navbar() {
               <span className="nav-underline bg-brand-gradient"></span>
             </div>
 
+            
             {/* Services */}
-            <div className="nav-item">
-              <div className="flex items-center gap-1">
-                <span className="select-none">Services</span>
-                <TiArrowSortedDown className="nav-arrow text-s" />
-              </div>
+            <div className="nav-item relative group">
+
+              {/* MAIN LINK (Services) */}
+              <Link href="/services" className="flex items-center gap-1">
+                <span className="select-none cursor-pointer">Services</span>
+                <TiArrowSortedDown className="nav-arrow" />
+              </Link>
+
               <span className="nav-underline bg-brand-gradient"></span>
 
-              <div className="nav-dropdown bg-white">
-                <p className="text-black text-sm">Service 1</p>
-                <p className="text-black text-sm">Service 2</p>
+              {/* DROPDOWN */}
+              <div className="nav-dropdown bg-white hidden group-hover:block">
+                <Link href="/services/web-app">
+                  <p className="text-black text-sm py-2 px-3 hover:bg-gray-100 cursor-pointer">
+                    Web App Development
+                  </p>
+                </Link>
+
+                <Link href="/services/mobile-app">
+                  <p className="text-black text-sm py-2 px-3 hover:bg-gray-100 cursor-pointer">
+                    Mobile App Development
+                  </p>
+                </Link>
+
+                <Link href="/services/ui-ux-design">
+                  <p className="text-black text-sm py-2 px-3 hover:bg-gray-100 cursor-pointer">
+                    UI/UX Design
+                  </p>
+                </Link>
               </div>
+
             </div>
 
-            {/* Products */}
+            {/* Products
             <div className="nav-item">
               <div className="flex items-center gap-1">
                 <span className="select-none">Products</span>
@@ -80,11 +101,11 @@ export default function Navbar() {
                 <p className="text-black text-sm">Product 1</p>
                 <p className="text-black text-sm">Product 2</p>
               </div>
-            </div>
+            </div> */}
 
             {/* About */}
             <div className="nav-item">
-              <Link href="/about">About</Link>
+              <Link href="/aboutus">About</Link>
               <span className="nav-underline bg-brand-gradient"></span>
             </div>
 
@@ -170,7 +191,7 @@ export default function Navbar() {
               </div>
 
               {/* Products Dropdown */}
-              <div>
+              {/* <div>
                 <button
                   onClick={() => setProductsOpen(!productsOpen)}
                   className="w-full flex justify-between items-center text-lg font-medium"
@@ -185,7 +206,7 @@ export default function Navbar() {
                     <Link href="/products/product2" className="block"> Product 2 </Link>
                   </div>
                 )}
-              </div>
+              </div> */}
 
               <Link href="/about" className="block text-lg font-medium"> About </Link>
               <Link href="/contact" className="block text-lg font-medium"> Contact Us </Link>
